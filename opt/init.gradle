@@ -20,8 +20,8 @@ class HerokuGradleSettings extends BuildAdapter implements BuildListener {
  
       repositories {
       	maven {
-      		name: 'heroku-proxy'
-      		url: "http://s3pository.heroku.com/jvm"
+      		name = 'heroku-proxy'
+      		url = "http://s3pository.heroku.com/jvm"
       	}
       }
     }
