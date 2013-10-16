@@ -1,22 +1,25 @@
 # Heroku buildpack : Gradle
-
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Gradle](http://www.gradle.org/) apps.  
 It has been updated to support latest version of Gradle.
 
 ## Usage
+Example usage :
 
-Example usage :  
-`$ ls  
-build.gradle`
+    $ ls  
+    build.gradle`
 
-`$ heroku create --buildpack https://github.com/joow/heroku-buildpack-gradle.git` for a new app.  
-or
-`$ heroku config:set BUILDPACK_URL=https://github.com/joow/heroku-buildpack-gradle` for an existing app.
+For a new app :
 
-`$ git push heroku master`  
-`-----> Fetching custom git buildpack... done`  
-`-----> Gradle app detected`  
-`-----> Building Gradle app...`
+    $ heroku create --buildpack https://github.com/joow/heroku-buildpack-gradle.git`
+    
+or for an existing app :
+
+    $ heroku config:set BUILDPACK_URL=https://github.com/joow/heroku-buildpack-gradle
+
+    $ git push heroku master
+    -----> Fetching custom git buildpack... done
+    -----> Gradle app detected
+    -----> Building Gradle app...
 
 It is worth mentioning that your gradle build should :
 
