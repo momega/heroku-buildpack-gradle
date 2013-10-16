@@ -6,7 +6,7 @@ It has been updated to support latest version of Gradle.
 Example usage :
 
     $ ls  
-    build.gradle`
+    build.gradle
 
 For a new app :
 
