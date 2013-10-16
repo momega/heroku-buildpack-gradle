@@ -42,6 +42,7 @@ else
     GRADLE_URL="http://services.gradle.org/distributions/$GRADLE_DIST-bin.zip"
     echo -n "-----> Installing $GRADLE_DIST....."
     curl --silent --location $GRADLE_URL | jar -x
+    chmod -f u+x $GRADLE_DIST/bin/gradle
     echo " done"
   fi
   BUILDCMD="gradle -I $OPT_DIR/init.gradle"
