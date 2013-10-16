@@ -10,7 +10,7 @@ OPT_DIR=$(cd $BIN_DIR/../opt; pwd)
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-GRADLE_DIST="gradle-1.0-milestone-5"
+GRADLE_DIST="gradle-1.8"
 GRADLE_TASK="stage"
 
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xz
@@ -39,9 +39,9 @@ if [ -f $BUILD_DIR/gradlew ] ; then
 else
   if [ ! -d $CACHE_DIR/$GRADLE_DIST ] ; then
     cd $CACHE_DIR
-    GRADLE_URL="http://heroku-jvm-buildpack-gradle.s3.amazonaws.com/$GRADLE_DIST.tar.gz"
+    GRADLE_URL="http://services.gradle.org/distributions/$GRADLE_DIST-bin.zip"
     echo -n "-----> Installing $GRADLE_DIST....."
-    curl --silent --location $GRADLE_URL | tar xz
+    curl --silent --location $GRADLE_URL | unzip -qq
     echo " done"
   fi
   BUILDCMD="gradle -I $OPT_DIR/init.gradle"
