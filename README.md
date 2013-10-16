@@ -1,13 +1,13 @@
 # Heroku buildpack : Gradle
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Gradle](http://www.gradle.org/) apps.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Gradle](http://www.gradle.org/) apps.  
 It has been updated to support latest version of Gradle.
 
 ## Usage
 
 Example usage :  
-`$ ls`  
-`build.gradle`
+`$ ls  
+build.gradle`
 
 `$ heroku create --buildpack https://github.com/joow/heroku-buildpack-gradle.git` for a new app.  
 or
